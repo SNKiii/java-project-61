@@ -1,0 +1,37 @@
+package hexlet.code;
+
+import java.util.Scanner;
+
+public class Even {
+private static final int MAX = 10000;
+private static final int MIN = 1;
+public static void gameEven(){
+    Scanner answer = new Scanner(System.in);
+    int counter = 0;
+    System.out.println("Welcome to the Brain Games!");
+    Scanner input = new Scanner(System.in);
+    System.out.print("May I have your name? ");
+    String name = input.nextLine();
+    System.out.println("Hello, " + name + "!");
+    while(counter < 3) {
+    int randomNumber = (int) (Math.random() * ((MAX - MIN) + MIN));
+        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.\n Question: " + randomNumber);
+        System.out.print("Your answer: ");
+        String answerString = answer.nextLine();
+        if(randomNumber%2 == 0 && answerString.equals("yes")){
+            counter++;
+            System.out.println("Correct!");
+        } else if(randomNumber%2 != 0 && answerString.equals("no")){
+            counter++;
+            System.out.println("Correct!");
+        } else {
+            System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.\n" +
+                    "Let's try again, " + name + "!");
+            break;
+        }
+    }
+    if(counter == 3){
+        System.out.println("Congratulations, " + name + "!");
+    }
+}
+}

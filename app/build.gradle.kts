@@ -2,10 +2,7 @@ plugins {
     id("java")
     id("application")
     id("org.sonarqube") version "7.2.2.6593"
-    id("checkstyle")
-}
-application{
-    mainClass.set("hexlet.code.App")
+//    id("checkstyle")
 }
 sonar {
     properties {
@@ -13,6 +10,12 @@ sonar {
         property("sonar.organization", "snkiii")
     }
 }
+application{
+    mainClass.set("hexlet.code.App")
+}
+//checkstyle {
+//    toolVersion = "10.12.4"
+//}
 group = "hexlet.code"
 version = "1.0-SNAPSHOT"
 
