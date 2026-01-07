@@ -44,7 +44,7 @@ public class Calc {
                 counter++;
                 System.out.println("Correct!");
             } else {
-                System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.\n" +
+                System.out.println("'yes' is wrong answer ;(. Correct answer was" + rightAnswer + "\n" +
                         "Let's try again, " + name + "!");
                 break;
             }
