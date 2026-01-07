@@ -14,7 +14,7 @@ public static void gameEven(){
     String name = input.nextLine();
     System.out.println("Hello, " + name + "!");
     while(counter < 3) {
-    int randomNumber = (int) (Math.random() * ((MAX - MIN) + MIN));
+    int randomNumber = (int) (Math.random() * ((MAX - MIN + 1)) + MIN);
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.\n Question: " + randomNumber);
         System.out.print("Your answer: ");
         String answerString = answer.nextLine();

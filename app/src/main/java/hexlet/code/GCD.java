@@ -22,8 +22,8 @@ public class GCD {
         String name = input.nextLine();
         System.out.println("Hello, " + name + "!");
         while(counter < 3) {
-            int randomNumber1 = (int) (Math.random() * ((MAX - MIN) + MIN));
-            int randomNumber2 = (int) (Math.random() * ((MAX - MIN) + MIN));
+            int randomNumber1 = (int) (Math.random() * ((MAX - MIN + 1)) + MIN);
+            int randomNumber2 = (int) (Math.random() * ((MAX - MIN + 1)) + MIN);
             int multiNumber = MaxMultiplicity(randomNumber1, randomNumber2);
             System.out.println("Find the greatest common divisor of given numbers.\n Question: " + randomNumber1 + "|" + randomNumber2);
             System.out.print("Your answer: ");

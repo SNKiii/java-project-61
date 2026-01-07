@@ -32,8 +32,8 @@ public class Calc {
         String name = input.nextLine();
         System.out.println("Hello, " + name + "!");
         while (counter < 3) {
-            int randomNumber1 = (int) (Math.random() * ((MAX - MIN) + MIN));
-            int randomNumber2 = (int) (Math.random() * ((MAX - MIN) + MIN));
+            int randomNumber1 = (int) (Math.random() * ((MAX - MIN + 1)) + MIN);
+            int randomNumber2 = (int) (Math.random() * ((MAX - MIN + 1)) + MIN);
             String sing = randomSings(signs);
             String expression = randomNumber1 + sing + randomNumber2;
             int rightAnswer = meaningOfTheExpression(randomNumber1, randomNumber2, sing);
