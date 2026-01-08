@@ -4,15 +4,20 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Progression {
+    //numbers for the array size range
     private static final int MAX_SIZE = 10;
     private static final int MIN_SIZE = 5;
+    //numbers for the range of the common multiplier
     private static final int MAX_MULTIPLIER = 20;
     private static final int MIN_MULTIPLIER = 2;
+    //numbers for a range of random numbers
     private static final int MAX_NUMBER = 100;
     private static final int MIN_NUMBER = 1;
+    //Method for generating an array with progression numbers
     private static Integer[] generateArr() {
         int multiplier = (int) (Math.random() * ((MAX_MULTIPLIER - MIN_MULTIPLIER) + 1) + MIN_MULTIPLIER);
         int sizeArr = (int) (Math.random() * ((MAX_SIZE - MIN_SIZE ) + 1) + MIN_SIZE);
+        //variable for outputting a random number from 1 to 3, which will be used to select the type of progression
         int randomProgression = (int) (Math.random() * (3 - 1 + 1) + 1);
         int randomFirstNumber = (int) (Math.random() * ((MAX_NUMBER - MIN_NUMBER) + 1) + MIN_NUMBER);
         Integer[] arrProgression = new Integer[sizeArr];
@@ -41,6 +46,7 @@ public class Progression {
             return null;
         }
     }
+    //Method for generating a progression string with one missing element
     private static String getFinishedProgression(Integer[] arr, int position){
         String progression = "";
         for(int i = 0; i < arr.length; i++){
@@ -67,6 +73,7 @@ public class Progression {
             System.out.println("What number is missing in the progression?\n Question: " + FinishedProgression);
             System.out.print("Your answer: ");
             String answerString = answer.nextLine();
+            //verifying the correctness of the user's response. If the answer is correct, the counter is triggered.
             if(answerString.equals(String.valueOf(arrProgression[randomPosition]))){
                 counter++;
                 System.out.println("Correct!");
@@ -76,6 +83,7 @@ public class Progression {
                 break;
             }
         }
+        //When the counter is filled in, a line with congratulations is displayed.
         if(counter == 3){
             System.out.println("Congratulations, " + name + "!");
         }

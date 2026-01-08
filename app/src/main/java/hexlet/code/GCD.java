@@ -3,8 +3,10 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class GCD {
+    //Numbers for a range of random numbers
     private static final int MAX = 100;
     private static final int MIN = 1;
+    //a method for finding the greatest common divisor using the Euclidean algorithm.
     private static int MaxMultiplicity(int number1, int number2){
         while(number2 != 0){
             int temp = number2;
@@ -28,6 +30,7 @@ public class GCD {
             System.out.println("Find the greatest common divisor of given numbers.\n Question: " + randomNumber1 + "|" + randomNumber2);
             System.out.print("Your answer: ");
             String answerString = answer.nextLine();
+            //We represent our expression in terms of the string.
             if(answerString.equals(String.valueOf(multiNumber))){
                 counter++;
                 System.out.println("Correct!");
@@ -37,6 +40,7 @@ public class GCD {
                 break;
             }
         }
+        //When the counter is filled in, a line with congratulations is displayed.
         if(counter == 3){
             System.out.println("Congratulations, " + name + "!");
         }
