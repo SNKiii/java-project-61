@@ -1,5 +1,4 @@
 plugins {
-    id("java")
     id("application")
     id("org.sonarqube") version "7.2.2.6593"
 //    id("checkstyle")
@@ -21,15 +20,6 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
-}
-
-dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-}
-
-tasks.test {
-    useJUnitPlatform()
 }
 tasks.getByName("run", JavaExec::class) {
     standardInput = System.`in`

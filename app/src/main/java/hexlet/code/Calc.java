@@ -1,7 +1,6 @@
 package hexlet.code;
 
 import java.util.Map;
-import java.util.Scanner;
 import java.util.HashMap;
 
 public class Calc {
@@ -28,13 +27,9 @@ public class Calc {
         signs.put(0, "+");
         signs.put(1, "-");
         signs.put(2, "*");
-        Scanner answer = new Scanner(System.in);
         int counter = 0;
-        System.out.println("Welcome to the Brain Games!");
-        Scanner input = new Scanner(System.in);
-        System.out.print("May I have your name? ");
-        String name = input.nextLine();
-        System.out.println("Hello, " + name + "!");
+        String question = "What is the result of the expression?:";
+        String[][] answersToQuestions = new String[3][2];
         while (counter < 3) {
             int randomNumber1 = (int) (Math.random() * ((MAX - MIN + 1)) + MIN);
             int randomNumber2 = (int) (Math.random() * ((MAX - MIN + 1)) + MIN);
@@ -42,22 +37,10 @@ public class Calc {
             //We represent our expression in terms of the string.
             String expression = randomNumber1 + sign + randomNumber2;
             int rightAnswer = meaningOfTheExpression(randomNumber1, randomNumber2, sign);
-            System.out.println("What is the result of the expression? \nQuestion: " + expression);
-            System.out.print("Your answer: ");
-            String answerString = answer.nextLine();
-            //Verifying the correctness of the user's response. If the answer is correct, the counter is triggered.
-            if (answerString.equals(String.valueOf(rightAnswer))) {
-                counter++;
-                System.out.println("Correct!");
-            } else {
-                System.out.println("'yes' is wrong answer ;(. Correct answer was" + rightAnswer + "\n" +
-                        "Let's try again, " + name + "!");
-                break;
-            }
+            answersToQuestions[counter][0] = expression;
+            answersToQuestions[counter][1] = String.valueOf(rightAnswer);
+            counter++;
         }
-        //When the counter is filled in, a line with congratulations is displayed.
-        if (counter == 3) {
-            System.out.println("Congratulations, " + name + "!");
-        }
+        Engine.greeting(answersToQuestions, question);
     }
 }

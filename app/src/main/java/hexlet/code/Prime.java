@@ -23,39 +23,21 @@ public class Prime {
         return false;
     }
     public static void gameEven(){
-        Scanner answer = new Scanner(System.in);
         int counter = 0;
-        System.out.println("Welcome to the Brain Games!");
-        Scanner input = new Scanner(System.in);
-        System.out.print("May I have your name? ");
-        String name = input.nextLine();
-        System.out.println("Hello, " + name + "!");
+        String[][] answersToQuestions = new String[3][2];
+        String questions = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         while(counter < 3) {
             int randomNumber = (int) (Math.random() * ((MAX - MIN + 1)) + MIN);
             boolean checkingPrime = checkingPrimeNumber(randomNumber);
-            System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.\n Question: " + randomNumber);
-            System.out.print("Your answer: ");
-            String answerString = answer.nextLine();
-            //verifying the correctness of the user's response. If the answer is correct, the counter is triggered.
-            if(answerString.equals("yes") && checkingPrime){
-                counter++;
-                System.out.println("Correct!");
-            } else if(answerString.equals("no") && !checkingPrime){
-                counter++;
-                System.out.println("Correct!");
+            answersToQuestions[counter][0] = String.valueOf(randomNumber);
+            if(checkingPrime){
+                answersToQuestions[counter][1] = "yes";
             } else {
-                String correctAnswer = "no";
-                if(checkingPrime){
-                    correctAnswer = "yes";
-                }
-                System.out.println("'" + answerString + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'\n" +
-                        "Let's try again, " + name + "!");
-                break;
+                answersToQuestions[counter][1] = "no";
             }
-        }
-        //When the counter is filled in, a line with congratulations is displayed.
-        if(counter == 3){
-            System.out.println("Congratulations, " + name + "!");
+            counter++;
+            }
+        Engine.greeting(answersToQuestions, questions);
         }
     }
-}
+

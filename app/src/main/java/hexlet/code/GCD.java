@@ -16,33 +16,17 @@ public class GCD {
         return Math.abs(number1);
     }
     public static void gameGCD(){
-        Scanner answer = new Scanner(System.in);
         int counter = 0;
-        System.out.println("Welcome to the Brain Games!");
-        Scanner input = new Scanner(System.in);
-        System.out.print("May I have your name? ");
-        String name = input.nextLine();
-        System.out.println("Hello, " + name + "!");
+        String[][] answersToQuestions = new String[3][2];
+        String questions = "Find the greatest common divisor of given numbers.";
         while(counter < 3) {
             int randomNumber1 = (int) (Math.random() * ((MAX - MIN + 1)) + MIN);
             int randomNumber2 = (int) (Math.random() * ((MAX - MIN + 1)) + MIN);
             int multiNumber = MaxMultiplicity(randomNumber1, randomNumber2);
-            System.out.println("Find the greatest common divisor of given numbers.\n Question: " + randomNumber1 + "|" + randomNumber2);
-            System.out.print("Your answer: ");
-            String answerString = answer.nextLine();
-            //We represent our expression in terms of the string.
-            if(answerString.equals(String.valueOf(multiNumber))){
-                counter++;
-                System.out.println("Correct!");
-            } else {
-                System.out.println("'" + answerString + "' is wrong answer ;(. Correct answer was " + multiNumber + "\n" +
-                        "Let's try again, " + name + "!");
-                break;
-            }
+            answersToQuestions[counter][0] = randomNumber1 + "|" + randomNumber2;
+            answersToQuestions[counter][1] = String.valueOf(multiNumber);
+            counter++;
         }
-        //When the counter is filled in, a line with congratulations is displayed.
-        if(counter == 3){
-            System.out.println("Congratulations, " + name + "!");
-        }
+       Engine.greeting(answersToQuestions, questions);
     }
 }
