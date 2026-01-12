@@ -30,7 +30,7 @@ public class App {
                 Prime.gameEven();
                 break;
             default:
-                System.out.println("incorrect syntax. Please try again");
+                throw new RuntimeException("Unknown user input " + game);
         }
 
     }

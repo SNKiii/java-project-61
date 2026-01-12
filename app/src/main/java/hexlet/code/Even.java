@@ -7,19 +7,19 @@ public class Even {
 
     public static void gameEven() {
         String[][] answersToQuestions = new String[3][2];
-        int counter = 0;
+        int counter= 0;
+        String answer = "";
         String questions = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        while (counter < 3) {
+        while (counter < Engine.ROUNDS) {
             int randomNumber = (int) (Math.random() * ((MAX - MIN + 1)) + MIN);
             if (randomNumber % 2 == 0) {
-                answersToQuestions[counter][0] = String.valueOf(randomNumber);
-                answersToQuestions[counter][1] = "yes";
-                counter++;
+                answer = "yes";
             } else {
-                answersToQuestions[counter][0] = String.valueOf(randomNumber);
-                answersToQuestions[counter][1] = "no";
-                counter++;
+                answer = "no";
             }
+            answersToQuestions[counter][0] = String.valueOf(randomNumber);
+            answersToQuestions[counter][1] = answer;
+            counter++;
         }
         Engine.greeting(answersToQuestions, questions);
     }

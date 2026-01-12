@@ -30,7 +30,7 @@ public class Calc {
         int counter = 0;
         String question = "What is the result of the expression?:";
         String[][] answersToQuestions = new String[3][2];
-        while (counter < 3) {
+        while (counter < Engine.ROUNDS) {
             int randomNumber1 = (int) (Math.random() * ((MAX - MIN + 1)) + MIN);
             int randomNumber2 = (int) (Math.random() * ((MAX - MIN + 1)) + MIN);
             String sign = randomSings(signs);
