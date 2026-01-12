@@ -1,7 +1,6 @@
 package hexlet.code;
 
 
-import java.util.Scanner;
 
 public class Progression {
     //numbers for the array size range
@@ -38,7 +37,7 @@ public class Progression {
             }
             return arrProgression;
         } else {
-            return null;
+            return arrProgression;
         }
     }
     //Method for generating a progression string with one missing element
@@ -53,19 +52,19 @@ public class Progression {
         return progression;
     }
     public static void gameProgression(){
-        int multiplier = (int) (Math.random() * ((MAX_MULTIPLIER - MIN_MULTIPLIER) + 1) + MIN_MULTIPLIER);
-        int sizeProgression = (int) (Math.random() * ((MAX_SIZE - MIN_SIZE ) + 1) + MIN_SIZE);
+        int multiplier = (int) (Math.random() * (MAX_MULTIPLIER - MIN_MULTIPLIER + 1) + MIN_MULTIPLIER);
+        int sizeProgression = (int) (Math.random() * (MAX_SIZE - MIN_SIZE + 1) + MIN_SIZE);
         //variable for outputting a random number from 1 to 3, which will be used to select the type of progression
         int randomTypeProgression = (int) (Math.random() * (3 - 1 + 1) + 1);
-        int randomFirstNumber = (int) (Math.random() * ((MAX_NUMBER - MIN_NUMBER) + 1) + MIN_NUMBER);
+        int randomFirstNumber = (int) (Math.random() * (MAX_NUMBER - MIN_NUMBER + 1) + MIN_NUMBER);
         int counter = 0;
         String[][] answersToQuestions = new String[3][2];
         String questions = "What number is missing in the progression?";
         while(counter < Engine.ROUNDS) {
             String[] arrProgression = generateArr(multiplier,sizeProgression,randomTypeProgression, randomFirstNumber);
             int randomPosition = (int) (Math.random() * arrProgression.length);
-            String FinishedProgression = getFinishedProgression(arrProgression, randomPosition);
-            answersToQuestions[counter][0] = FinishedProgression;
+            String EncryptedProgressionString = getFinishedProgression(arrProgression, randomPosition);
+            answersToQuestions[counter][0] = EncryptedProgressionString;
             answersToQuestions[counter][1] = String.valueOf(arrProgression[randomPosition]);
             counter++;
         }

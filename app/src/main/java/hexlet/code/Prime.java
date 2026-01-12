@@ -8,8 +8,7 @@ public class Prime {
     private static boolean isCheckingPrimeNumber(int primeNumber) {
         if (primeNumber == 2) {
             return true;
-        } else if (primeNumber > 2) {
-            if (primeNumber % 2 != 0) {
+        } else if (primeNumber > 2 && primeNumber % 2 != 0) {
                 for (int i = 3; i <= Math.sqrt(primeNumber); i++) {
                     if (primeNumber % i == 0) {
                         return false;
@@ -17,7 +16,6 @@ public class Prime {
                 }
                 return true;
             }
-        }
         return false;
     }
     public static void gameEven(){
@@ -25,7 +23,7 @@ public class Prime {
         String[][] answersToQuestions = new String[3][2];
         String questions = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         while(counter < Engine.ROUNDS) {
-            int randomNumber = (int) (Math.random() * ((MAX - MIN + 1)) + MIN);
+            int randomNumber = (int) (Math.random() * (MAX - MIN + 1) + MIN);
             answersToQuestions[counter][0] = String.valueOf(randomNumber);
             if(isCheckingPrimeNumber(randomNumber)){
                 answersToQuestions[counter][1] = "yes";

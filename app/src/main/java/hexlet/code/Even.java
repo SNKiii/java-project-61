@@ -11,7 +11,7 @@ public class Even {
         String answer = "";
         String questions = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         while (counter < Engine.ROUNDS) {
-            int randomNumber = (int) (Math.random() * ((MAX - MIN + 1)) + MIN);
+            int randomNumber = (int) (Math.random() * (MAX - MIN + 1) + MIN);
             if (randomNumber % 2 == 0) {
                 answer = "yes";
             } else {

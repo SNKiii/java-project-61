@@ -20,8 +20,8 @@ public class GCD {
         String[][] answersToQuestions = new String[3][2];
         String questions = "Find the greatest common divisor of given numbers.";
         while(counter < Engine.ROUNDS) {
-            int randomNumber1 = (int) (Math.random() * ((MAX - MIN + 1)) + MIN);
-            int randomNumber2 = (int) (Math.random() * ((MAX - MIN + 1)) + MIN);
+            int randomNumber1 = (int) (Math.random() * (MAX - MIN + 1) + MIN);
+            int randomNumber2 = (int) (Math.random() * (MAX - MIN + 1) + MIN);
             int multiNumber = maxMultiplicity(randomNumber1, randomNumber2);
             answersToQuestions[counter][0] = randomNumber1 + "|" + randomNumber2;
             answersToQuestions[counter][1] = String.valueOf(multiNumber);
