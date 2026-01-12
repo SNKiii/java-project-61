@@ -1,6 +1,7 @@
 ### Hexlet tests and linter status:
 [![SonarQube](https://github.com/SNKiii/java-project-61/actions/workflows/build.yml/badge.svg)](https://github.com/SNKiii/java-project-61/actions/workflows/build.yml)
 [![Actions Status](https://github.com/SNKiii/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/SNKiii/java-project-61/actions)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=SNKiii_java-project-61&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=SNKiii_java-project-61)
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/24df4e15-1796-436a-949f-a706adce48e2" />
 an example of how the game Even works. Make doesn't want to work in any way.
 <img width="1917" height="1019" alt="image" src="https://github.com/user-attachments/assets/f822ad9b-19b7-4772-8af6-474b886a2403" /> 
