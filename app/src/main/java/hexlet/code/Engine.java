@@ -13,14 +13,14 @@ public static void greeting(String[][] answersToQuestions, String questionHeader
     String name = input.nextLine();
     System.out.println("Hello, " + name + "!");
     System.out.println(questionHeader);
-    for(String[] i : answersToQuestions){
-        System.out.println("Question: " + i[0]);
+    for(String[] quastion : answersToQuestions){
+        System.out.println("Question: " + quastion[0]);
         System.out.print("Your answer: ");
         String answerString = answer.nextLine();
-        if(answerString.equals(i[1])){
+        if(answerString.equals(quastion[1])){
             System.out.println("Correct!");
         } else {
-            System.out.println("'" + answerString + "' is wrong answer ;(. Correct answer was '" + i[1] + "'.\n" +
+            System.out.println("'" + answerString + "' is wrong answer ;(. Correct answer was '" + quastion[1] + "'.\n" +
                     "Let's try again, " + name + "!");
             System.exit(0);
         }

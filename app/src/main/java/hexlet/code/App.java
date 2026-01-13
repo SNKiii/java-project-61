@@ -1,13 +1,15 @@
 package hexlet.code;
 
+import hexlet.game.*;
+
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
         Scanner gameNumber = new Scanner(System.in);
         System.out.println("Please enter the game number and press Enter.\n 1 - Great\n 2 - Even\n 3 - Calc\n 4 - GCD\n 5 - Progression\n 6 - Prime\n 0 - Exit\n");
-        String game = gameNumber.nextLine();
-        switch(game){
+        String input = gameNumber.nextLine();
+        switch(input){
             case "0":
             break;
             case "1":
@@ -27,10 +29,10 @@ public class App {
                 Progression.gameProgression();
                 break;
             case "6":
-                Prime.gameEven();
+                Prime.gamePrime();
                 break;
             default:
-                throw new RuntimeException("Unknown user input " + game);
+                throw new RuntimeException("Unknown user input " + input);
         }
 
     }

@@ -1,7 +1,8 @@
-package hexlet.code;
+package hexlet.game;
 
 import java.util.Map;
 import java.util.HashMap;
+import hexlet.code.Engine;
 
 public class Calc {
     //Numbers for a range of random numbers

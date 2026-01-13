@@ -1,6 +1,6 @@
-package hexlet.code;
+package hexlet.game;
 
-import java.util.Scanner;
+import hexlet.code.Engine;
 
 public class GCD {
     //Numbers for a range of random numbers

@@ -1,4 +1,6 @@
-package hexlet.code;
+package hexlet.game;
+
+import  hexlet.code.Engine;
 
 public class Prime {
     ////Numbers for a range of random numbers
@@ -18,7 +20,7 @@ public class Prime {
             }
         return false;
     }
-    public static void gameEven(){
+    public static void gamePrime(){
         int counter = 0;
         String[][] answersToQuestions = new String[3][2];
         String questions = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";

@@ -1,4 +1,5 @@
-package hexlet.code;
+package hexlet.game;
+import hexlet.code.Engine;
 
 public class Even {
     //numbers for a range of random numbers
@@ -12,11 +13,7 @@ public class Even {
         String questions = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         while (counter < Engine.ROUNDS) {
             int randomNumber = (int) (Math.random() * (MAX - MIN + 1) + MIN);
-            if (randomNumber % 2 == 0) {
-                answer = "yes";
-            } else {
-                answer = "no";
-            }
+            answer = randomNumber %2 == 0 ? "yes" : "no";
             answersToQuestions[counter][0] = String.valueOf(randomNumber);
             answersToQuestions[counter][1] = answer;
             counter++;
