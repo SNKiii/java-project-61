@@ -1,4 +1,5 @@
 package hexlet.game;
+
 import hexlet.code.Engine;
 
 public class Even {
