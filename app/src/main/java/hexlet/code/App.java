@@ -1,6 +1,6 @@
 package hexlet.code;
 
-import hexlet.game.*;
+import hexlet.code.game.*;
 
 import java.util.Scanner;
 
@@ -32,7 +32,7 @@ public class App {
                 Prime.gamePrime();
                 break;
             default:
-                throw new RuntimeException("Unknown user input " + input);
+                throw new RuntimeException("Unknown user input '" + input + "' in game selection.");
         }
 
     }
