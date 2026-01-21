@@ -23,7 +23,7 @@ public class GCD {
             int randomNumber1 = (int) (Math.random() * (MAX - MIN + 1) + MIN);
             int randomNumber2 = (int) (Math.random() * (MAX - MIN + 1) + MIN);
             int multiNumber = maxMultiplicity(randomNumber1, randomNumber2);
-            answersToQuestions[counter][0] = randomNumber1 + "|" + randomNumber2;
+            answersToQuestions[counter][0] = randomNumber1 + " | " + randomNumber2;
             answersToQuestions[counter][1] = String.valueOf(multiNumber);
             counter++;
         }
