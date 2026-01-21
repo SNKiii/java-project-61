@@ -8,7 +8,7 @@ public class Even {
     private static final int MIN = 1;
 
     public static void gameEven() {
-        String[][] answersToQuestions = new String[3][2];
+        String[][] answersToQuestions = new String[Engine.ROUNDS][Engine.sumOfNumberOfUserResponseAndCorrectAnswer];
         int counter= 0;
         String answer = "";
         String questions = "Answer 'yes' if the number is even, otherwise answer 'no'.";

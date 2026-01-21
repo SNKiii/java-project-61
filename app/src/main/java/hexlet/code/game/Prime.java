@@ -22,7 +22,7 @@ public class Prime {
     }
     public static void gamePrime(){
         int counter = 0;
-        String[][] answersToQuestions = new String[3][2];
+        String[][] answersToQuestions = new String[Engine.ROUNDS][Engine.sumOfNumberOfUserResponseAndCorrectAnswer];
         String questions = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         while(counter < Engine.ROUNDS) {
             int randomNumber = (int) (Math.random() * (MAX - MIN + 1) + MIN);

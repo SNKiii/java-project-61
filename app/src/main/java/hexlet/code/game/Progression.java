@@ -25,7 +25,7 @@ public class Progression {
     }
     public static void gameProgression(){
         int counter = 0;
-        String[][] answersToQuestions = new String[3][2];
+        String[][] answersToQuestions = new String[Engine.ROUNDS][Engine.sumOfNumberOfUserResponseAndCorrectAnswer];
         String questions = "What number is missing in the progression?";
         while(counter < Engine.ROUNDS) {
             int multiplier = (int) (Math.random() * (MAX_MULTIPLIER - MIN_MULTIPLIER + 1) + MIN_MULTIPLIER);

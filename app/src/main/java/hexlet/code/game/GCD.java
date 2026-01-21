@@ -17,7 +17,7 @@ public class GCD {
     }
     public static void gameGCD(){
         int counter = 0;
-        String[][] answersToQuestions = new String[3][2];
+        String[][] answersToQuestions = new String[Engine.ROUNDS][Engine.sumOfNumberOfUserResponseAndCorrectAnswer];
         String questions = "Find the greatest common divisor of given numbers.";
         while(counter < Engine.ROUNDS) {
             int randomNumber1 = (int) (Math.random() * (MAX - MIN + 1) + MIN);
