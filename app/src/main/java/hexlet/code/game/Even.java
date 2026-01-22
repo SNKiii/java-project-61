@@ -8,13 +8,13 @@ public class Even {
     private static final int MIN = 1;
 
     public static void gameEven() {
-        String[][] answersToQuestions = new String[Engine.ROUNDS][Engine.sumOfNumberOfUserResponseAndCorrectAnswer];
-        int counter= 0;
-        String answer = "";
+        String[][] answersToQuestions = new String[Engine.ROUNDS][2];
+        int counter = 0;
+        String answer;
         String questions = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         while (counter < Engine.ROUNDS) {
             int randomNumber = (int) (Math.random() * (MAX - MIN + 1) + MIN);
-            answer = randomNumber %2 == 0 ? "yes" : "no";
+            answer = randomNumber % 2 == 0 ? "yes" : "no";
             answersToQuestions[counter][0] = String.valueOf(randomNumber);
             answersToQuestions[counter][1] = answer;
             counter++;
