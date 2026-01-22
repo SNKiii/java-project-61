@@ -21,8 +21,8 @@ public class Calc {
             case "+" -> number1 + number2;
             case "-" -> number1 - number2;
             case "*" -> number1 * number2;
-            default -> throw new RuntimeException(" this operation '" + expression +
-                    "' is not recognized. operation input error");
+            default -> throw new RuntimeException(" this operation '" + expression
+                    + "' is not recognized. operation input error");
         };
     }
 

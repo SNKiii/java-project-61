@@ -18,14 +18,14 @@ public class Progression {
     private static String[] generateArr(int multiplier, int sizeProgression, int randomFirstNumber) {
         String[] arrProgression = new String[sizeProgression];
         int copyRandomFirstNumber = randomFirstNumber;
-        for (int i = 0; i < sizeProgression; i++){
+        for (int i = 0; i < sizeProgression; i++) {
             arrProgression[i] = String.valueOf(copyRandomFirstNumber + multiplier);
             copyRandomFirstNumber = Integer.parseInt(arrProgression[i]);
         }
         return arrProgression;
     }
 
-    public static void gameProgression(){
+    public static void gameProgression() {
         int counter = 0;
         String[][] answersToQuestions = new String[Engine.ROUNDS][2];
         String questions = "What number is missing in the progression?";
