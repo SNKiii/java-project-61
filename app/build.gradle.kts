@@ -14,7 +14,7 @@ application{
 }
 checkstyle {
     toolVersion = "10.12.4"
-    configFile = file("${project.rootDir}/app/config/checkstyle/checkstyle.xml")
+    configFile = file("${project.rootDir}/config/checkstyle/checkstyle.xml")
 }
 group = "hexlet.code"
 version = "1.0-SNAPSHOT"
