@@ -7,6 +7,7 @@ sonar {
     properties {
         property("sonar.projectKey", "SNKiii_java-project-61")
         property("sonar.organization", "snkiii")
+        property("sonar.host.url", "https://sonarcloud.io")
     }
 }
 application{
@@ -14,7 +15,7 @@ application{
 }
 checkstyle {
     toolVersion = "10.12.4"
-    configFile = file("${project.rootDir}/config/checkstyle/checkstyle.xml")
+    configFile = rootProject.file("config/checkstyle/checkstyle.xml")
 }
 group = "hexlet.code"
 version = "1.0-SNAPSHOT"
