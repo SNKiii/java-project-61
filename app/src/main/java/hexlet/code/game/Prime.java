@@ -9,7 +9,7 @@ public class Prime {
     private static final int START_DIVISOR = 3;
 
     //Method for checking the primality of a number through a square root
-    private static boolean isCheckingPrimeNumber(int primeNumber) {
+    private static boolean isCheckingPrimeNumber(final int primeNumber) {
         if (primeNumber == 2) {
             return true;
         } else if (primeNumber > 2 && primeNumber % 2 != 0) {
@@ -25,8 +25,8 @@ public class Prime {
 
     public static void gamePrime() {
         int counter = 0;
-        String[][] answersToQuestions = new String[Engine.ROUNDS][2];
-        String questions = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+         String[][] answersToQuestions = new String[Engine.ROUNDS][2];
+         String questions = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         while (counter < Engine.ROUNDS) {
             int randomNumber = (int) (Math.random() * (MAX - MIN + 1) + MIN);
             answersToQuestions[counter][0] = String.valueOf(randomNumber);

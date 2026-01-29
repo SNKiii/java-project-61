@@ -10,13 +10,13 @@ public class Calc {
     private static final int MIN = 1;
 
     //A method for returning a random sign from a hash
-    private static String randomSings(Map<Integer, String> signs) {
+    private static String randomSings(final Map<Integer, String> signs) {
         int randomIndex = (int) (Math.random() * signs.size());
         return signs.get(randomIndex);
     }
 
     //A method for returning the value of two numbers based on the passed sign
-    private static int meaningOfTheExpression(int number1, int number2, String expression) {
+    private static int meaningOfTheExpression(final int number1, final int number2, final String expression) {
         return switch (expression) {
             case "+" -> number1 + number2;
             case "-" -> number1 - number2;
